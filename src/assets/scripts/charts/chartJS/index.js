@@ -49,7 +49,7 @@ export default (function () {
     });
     addData(chart, '2018' , 0) //adding a point in chart
   }
-
+/*
   // ------------------------------------------------------
   // @Bar Charts
   // ------------------------------------------------------
@@ -90,27 +90,35 @@ export default (function () {
   // ------------------------------------------------------
   // @Area Charts
   // ------------------------------------------------------
-
+*/
   const areaChartBox = document.getElementById('area-chart');
 
   if (areaChartBox) {
     const areaCtx = areaChartBox.getContext('2d');
 
-    new Chart(areaCtx, {
+    var areaChart = new Chart(areaCtx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['12:00 am', '1:00 am', '2:00 am', '3:00 am', '4:00 am', '5:00 am', '6:00 am', '7:00 am', '8:00 am'],
         datasets: [{
           backgroundColor : 'rgba(3, 169, 244, 0.5)',
           borderColor     : COLORS['light-blue-800'],
-          data            : [10, 50, 20, 40, 60, 30, 70],
-          label           : 'Dataset',
+          data            : [10, 50, 20, 40, 60, 30, 70, 50, 50],
+          label           : 'Stress',
           fill            : 'start',
         }],
       },
     });
+    //for(i = 0; i < 20; i++){
+      addData(areaChart, 'test', 10 );
+      addData(areaChart, 'test', 30 );
+      addData(areaChart, 'test', 50 );
+      addData(areaChart, 'test', 60 );
+      addData(areaChart, 'test', 20 );
+      //if dataset.data # > x, destroy and remake?
+    
   }
-
+/*
   // ------------------------------------------------------
   // @Scatter Charts
   // ------------------------------------------------------
@@ -151,5 +159,5 @@ export default (function () {
         }],
       },
     });
-  }
+  }*/
 }())
