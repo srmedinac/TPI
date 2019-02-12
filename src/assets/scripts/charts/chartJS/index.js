@@ -22,21 +22,21 @@ export default (function () {
     var chart = new Chart(lineCtx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'],
         datasets: [{
           label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : [10, 50, 70, 60, 50, 70, 60],
+          data                 : [10, 50, 70, 60, 50, 70, 60, 75, 85, 70, 75, 85],
         }, {
           label                : 'Heart Rate',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
           borderColor          : COLORS['blue-500'],
           pointBackgroundColor : COLORS['blue-700'],
           borderWidth          : 2,
-          data                 : [70, 75, 85, 70, 75, 85, 70],
+          data                 : [70, 75, 85, 70, 75, 85, 70, 75, 85, 70, 75, 85],
         }],
       },
 
@@ -47,8 +47,45 @@ export default (function () {
       },
 
     });
-    addData(chart, '2018' , 0) //adding a point in chart
+    addData(chart, 'December' , 30) //adding a point in chart
   }
+
+  const lineChartBox2 = document.getElementById('line-chart2');
+
+  if (lineChartBox2) {
+    const line2Ctx = lineChartBox2.getContext('2d');
+    lineChartBox2.height = 80;
+
+    var chart2 = new Chart(line2Ctx, {
+      type: 'line',
+      data: {
+        labels: ['12:00 am', '1:00 am', '2:00 am', '3:00 am', '4:00 am', '5:00 am', '6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am'],
+        datasets: [{
+          label                : 'Stress',
+          backgroundColor      : 'rgba(237, 231, 246, 0.5)',
+          borderColor          : COLORS['deep-purple-500'],
+          pointBackgroundColor : COLORS['deep-purple-700'],
+          borderWidth          : 2,
+          data                 : [60, 80, 110, 100, 90, 85, 62, 100, 90, 85, 62, 75],
+        }, {
+          label                : 'Heart Rate',
+          backgroundColor      : 'rgba(232, 245, 233, 0.5)',
+          borderColor          : COLORS['blue-500'],
+          pointBackgroundColor : COLORS['blue-700'],
+          borderWidth          : 2,
+          data                 : [70, 75, 85, 70, 75, 85, 70, 60, 80, 110, 100, 90],
+        }],
+      },
+
+      options: {
+        legend: {
+          display: false,
+        },
+      },
+
+    });
+    //addData(chart2, '2018' , 0) //adding a point in chart
+  }  
 /*
   // ------------------------------------------------------
   // @Bar Charts
