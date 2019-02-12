@@ -8,23 +8,30 @@ export default (function () {
 
   const lineChartBox = document.getElementById('line-chart');
 
+  function addData(chart, label, data) {
+    chart.data.labels.push(label);
+    chart.data.datasets.forEach((dataset) => {
+        dataset.data.push(data);
+    });
+    chart.update();
+}
   if (lineChartBox) {
     const lineCtx = lineChartBox.getContext('2d');
     lineChartBox.height = 80;
 
-    new Chart(lineCtx, {
+    var chart = new Chart(lineCtx, {
       type: 'line',
       data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
-          label                : 'Series A',
+          label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : [60, 50, 70, 60, 50, 70, 60],
+          data                 : [10, 50, 70, 60, 50, 70, 60],
         }, {
-          label                : 'Series B',
+          label                : 'Heart Rate',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
           borderColor          : COLORS['blue-500'],
           pointBackgroundColor : COLORS['blue-700'],
@@ -40,6 +47,7 @@ export default (function () {
       },
 
     });
+    addData(chart, '2018' , 0) //adding a point in chart
   }
 
   // ------------------------------------------------------
