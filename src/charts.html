@@ -21,8 +21,6 @@
         visibility: hidden;
       }
 
-
-
       .spinner {
         width: 40px;
         height: 40px;
@@ -89,13 +87,13 @@
     <!-- =================================================== -->
     <div>
       <!-- #Left Sidebar ==================== -->
-      <div class="sidebar">
+      <div class="sidebar" style="display: none;">
         <div class="sidebar-inner">
           <!-- ### $Sidebar Header ### -->
           <div class="sidebar-logo">
             <div class="peers ai-c fxw-nw">
               <div class="peer peer-greed">
-                <a class="sidebar-link td-n" href="index.html">
+                <a class="sidebar-link td-n" href="charts.html">
                   <div class="peers ai-c fxw-nw">
                     <div class="peer">
                       <div class="logo">
@@ -121,7 +119,7 @@
           <!-- ### $Sidebar Menu ### -->
           <ul class="sidebar-menu scrollable pos-r">
             <li class="nav-item mT-30 active">
-              <a class="sidebar-link" href="index.html">
+              <a class="sidebar-link" href="charts.html">
                 <span class="icon-holder">
                   <i class="c-blue-500 ti-home"></i>
                 </span>
@@ -296,7 +294,7 @@
             <ul class="nav-left">
               <li>
                 <a id='sidebar-toggle' class="sidebar-toggle" href="javascript:void(0);">
-                  <i class="ti-menu"></i>
+                  <i class="ti-menu" style="display: none;"></i>
                 </a>
               </li>
               <li class="search-box">
@@ -515,6 +513,24 @@
         <!-- ### $App Screen Content ### -->
         <main class='main-content bgc-grey-100'>
           <div id='mainContent'>
+          <!-- 
+              <div class="intro-block">
+                  <div class="monitor">
+
+              <?xml version="1.0" encoding="utf-8"?>
+                        <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                        <!-- 
+                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                           viewBox="1 1 200 100" style="enable-background:new 0 0 200 100;" xml:space="preserve">
+                        <g>
+                          <polyline class="ekg" points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
+                            213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113 	"/>
+                        </g>
+                        </svg>
+                        -->
+              <!-- </div>
+             </div> --> 
+
             <div class="row gap-20 masonry pos-r">
               <div class="masonry-sizer col-md-6 pos-a"></div>
               <div class="masonry-item col-md-6">
@@ -529,11 +545,11 @@
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Stress today</h6>
                   <div class="mT-30">
-                    <canvas id="area-chart" height="220"></canvas>
+                    <canvas id="area-chart" height="219"></canvas>
                   </div>
                 </div>
               </div>
-              <div class="masonry-item col-md-6">
+              <div class="masonry-item col-md-6" style="top: 264px;">
                 <div class="bgc-white p-20 bd">
                   <h6 class="c-grey-900">Heart rate today</h6>
                   <div class="mT-30">
@@ -643,7 +659,7 @@
 
         <!-- ### $App Screen Footer ### -->
         <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
-          <span>Copyright © 2017 Designed by <a href="https://colorlib.com" target='_blank' title="Colorlib">Colorlib</a>. All rights reserved.</span>
+          <span>  <a href="https://colorlib.com" target='_blank' title="Colorlib">UNAL</a>.</span>
         </footer>
       </div>
     </div>

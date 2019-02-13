@@ -13,11 +13,11 @@
 
 .page-container {
   min-height: 100vh;
-  padding-left: $offscreen-size;
+  padding-left: 0;
   transition: all 0.2s ease;
 
   @include between($breakpoint-md, $breakpoint-xl) {
-    padding-left: $collapsed-size;
+    padding-left: 0;
   }
 
   @include to($breakpoint-md) {
@@ -47,7 +47,7 @@
 // ---------------------------------------------------------
 
 .full-container {
-  left: $offscreen-size;
+  left: 0;
   min-height: calc(100vh - #{$header-height});
   position: absolute;
   right: 0;
@@ -70,7 +70,7 @@
 
 .is-collapsed {
   .page-container {
-    padding-left: $collapsed-size;
+    padding-left: 0;
 
     @include to($breakpoint-md) {
       padding-left: 0;
@@ -82,7 +82,7 @@
   }
 
   .full-container {
-    left: $collapsed-size;
+    left: 0;
 
     @include to($breakpoint-md) {
       left: 0;

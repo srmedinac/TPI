@@ -16,18 +16,29 @@ export default (function () {
     }, {
        "hour": "2:00 am",
        "value": 70
+    }],
+    "HeartRate": [{
+       "hour": "1:00 am",
+       "value": 30
+    }, {
+       "hour": "2:00 am",
+       "value": 100
     }]
  };
 
 
 //how to receive data? maybe json from arduino?
   
-  var labels = jsonfile.stress.map(function(e) {
+  var labelsStress = jsonfile.stress.map(function(e) {
       return e.hour;
    });
-   var data = jsonfile.stress.map(function(e) {
+   var dataStress = jsonfile.stress.map(function(e) {
       return e.value;
    });;
+
+   var dataHR = jsonfile.HeartRate.map(function(e) {
+    return e.value;
+ });;
   
   function addData(chart, label, data) {
     chart.data.labels.push(label);
@@ -43,21 +54,21 @@ export default (function () {
     var chart = new Chart(lineCtx, {
       type: 'line',
       data: {
-        labels: labels,
+        labels: labelsStress,
         datasets: [{
           label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : data,
+          data                 : dataStress,
         }, {
           label                : 'Heart Rate',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
           borderColor          : COLORS['blue-500'],
           pointBackgroundColor : COLORS['blue-700'],
           borderWidth          : 2,
-          data                 : [70, 75, 85, 70, 75, 85, 70, 75, 85, 70, 75, 85],
+          data                 : dataHR,
         }],
       },
 
@@ -68,7 +79,7 @@ export default (function () {
       },
 
     });
-    addData(chart, 'December' , 30) //adding a point in chart
+    addData(chart, '3:00 am' , 30) //adding a point in chart
   }
 
   const lineChartBox2 = document.getElementById('line-chart2');
@@ -80,21 +91,21 @@ export default (function () {
     var chart2 = new Chart(line2Ctx, {
       type: 'line',
       data: {
-        labels: ['12:00 am', '1:00 am', '2:00 am', '3:00 am', '4:00 am', '5:00 am', '6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am'],
+        labels: ['12:00 am', '1:00 am', '2:00 am'],
         datasets: [{
           label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : [60, 80, 110, 100, 90, 85, 62, 100, 90, 85, 62, 75],
+          data                 : [60, 80, 110],
         }, {
           label                : 'Heart Rate',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
           borderColor          : COLORS['blue-500'],
           pointBackgroundColor : COLORS['blue-700'],
           borderWidth          : 2,
-          data                 : [70, 75, 85, 70, 75, 85, 70, 60, 80, 110, 100, 90],
+          data                 : [70, 75, 85],
         }],
       },
 
