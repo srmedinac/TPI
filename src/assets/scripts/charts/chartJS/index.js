@@ -8,6 +8,27 @@ export default (function () {
 
   const lineChartBox = document.getElementById('line-chart');
 
+  //example json structure to receive from arduino
+  var jsonfile = {
+    "stress": [{
+       "hour": "1:00 am",
+       "value": 60
+    }, {
+       "hour": "2:00 am",
+       "value": 70
+    }]
+ };
+
+
+//how to receive data? maybe json from arduino?
+  
+  var labels = jsonfile.stress.map(function(e) {
+      return e.hour;
+   });
+   var data = jsonfile.stress.map(function(e) {
+      return e.value;
+   });;
+  
   function addData(chart, label, data) {
     chart.data.labels.push(label);
     chart.data.datasets.forEach((dataset) => {
@@ -22,14 +43,14 @@ export default (function () {
     var chart = new Chart(lineCtx, {
       type: 'line',
       data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'],
+        labels: labels,
         datasets: [{
           label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : [10, 50, 70, 60, 50, 70, 60, 75, 85, 70, 75, 85],
+          data                 : data,
         }, {
           label                : 'Heart Rate',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
