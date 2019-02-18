@@ -7,7 +7,11 @@ export default (function () {
   // ------------------------------------------------------
 
   const lineChartBox = document.getElementById('line-chart');
-
+  var port = new SerialPort('COM4', {
+    baudRate: 115200
+  });
+  var Readline = SerialPort.parsers.Readline
+  
   //example json structure to receive from arduino
   var jsonfile = {
     "stress": [{
@@ -25,8 +29,8 @@ export default (function () {
        "value": 100
     }]
  };
-
-
+ var datajson = {"stress":30,"HR":40};
+ //datajson = JSON.parse(datajson);
 //how to receive data? maybe json from arduino?
   
   var labelsStress = jsonfile.stress.map(function(e) {
@@ -39,6 +43,17 @@ export default (function () {
    var dataHR = jsonfile.HeartRate.map(function(e) {
     return e.value;
  });;
+var result = [];                      // Results will go here
+var nowHour = new Date().getHours();  // Get current hour of the day
+
+// Loop from current hour number to 23
+for(var i = 0; i < 24; i++){
+  result.push(i + "00");  // Put loop counter into array with "00" next to it
+}
+  var readStress = datajson.stress;
+  console.log(readStress);
+  var readHR = datajson.HR;
+  console.log(readHR)
   
   function addData(chart, label, data) {
     chart.data.labels.push(label);
@@ -54,21 +69,21 @@ export default (function () {
     var chart = new Chart(lineCtx, {
       type: 'line',
       data: {
-        labels: labelsStress,
+        labels: result,
         datasets: [{
           label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : dataStress,
+          data                 : datajson.stress,
         }, {
           label                : 'Heart Rate',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
           borderColor          : COLORS['blue-500'],
           pointBackgroundColor : COLORS['blue-700'],
           borderWidth          : 2,
-          data                 : dataHR,
+          data                 : datajson.HR,
         }],
       },
 
