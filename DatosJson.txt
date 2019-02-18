@@ -1,0 +1,472 @@
+{
+  "pulso": 96,
+  "estres": 48
+}
+{
+  "pulso": 96,
+  "estres": 48
+}
+{
+  "pulso": 96,
+  "estres": 48
+}
+{
+  "pulso": 96,
+  "estres": 48
+}
+{
+  "pulso": 96,
+  "estres": 48
+}
+{
+  "pulso": 122,
+  "estres": 61
+}
+{
+  "pulso": 144,
+  "estres": 72
+}
+{
+  "pulso": 156,
+  "estres": 78
+}
+{
+  "pulso": 178,
+  "estres": 89
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 164,
+  "estres": 82
+}
+{
+  "pulso": 152,
+  "estres": 76
+}
+{
+  "pulso": 123,
+  "estres": 61
+}
+{
+  "pulso": 99,
+  "estres": 49
+}
+{
+  "pulso": 35,
+  "estres": 17
+}
+{
+  "pulso": 26,
+  "estres": 13
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 27,
+  "estres": 13
+}
+{
+  "pulso": 40,
+  "estres": 20
+}
+{
+  "pulso": 62,
+  "estres": 31
+}
+{
+  "pulso": 69,
+  "estres": 34
+}
+{
+  "pulso": 76,
+  "estres": 38
+}
+{
+  "pulso": 76,
+  "estres": 38
+}
+{
+  "pulso": 76,
+  "estres": 38
+}
+{
+  "pulso": 80,
+  "estres": 40
+}
+{
+  "pulso": 90,
+  "estres": 45
+}
+{
+  "pulso": 104,
+  "estres": 52
+}
+{
+  "pulso": 111,
+  "estres": 55
+}
+{
+  "pulso": 127,
+  "estres": 63
+}
+{
+  "pulso": 127,
+  "estres": 63
+}
+{
+  "pulso": 127,
+  "estres": 63
+}
+{
+  "pulso": 127,
+  "estres": 63
+}
+{
+  "pulso": 127,
+  "estres": 63
+}
+{
+  "pulso": 132,
+  "estres": 66
+}
+{
+  "pulso": 180,
+  "estres": 90
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 182,
+  "estres": 91
+}
+{
+  "pulso": 168,
+  "estres": 84
+}
+{
+  "pulso": 152,
+  "estres": 76
+}
+{
+  "pulso": 136,
+  "estres": 68
+}
+{
+  "pulso": 121,
+  "estres": 60
+}
+{
+  "pulso": 103,
+  "estres": 51
+}
+{
+  "pulso": 89,
+  "estres": 44
+}
+{
+  "pulso": 73,
+  "estres": 36
+}
+{
+  "pulso": 53,
+  "estres": 26
+}
+{
+  "pulso": 31,
+  "estres": 15
+}
+{
+  "pulso": 19,
+  "estres": 9
+}
+{
+  "pulso": 19,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 20,
+  "estres": 10
+}
+{
+  "pulso": 25,
+  "estres": 12
+}
+{
+  "pulso": 31,
+  "estres": 15
+}
+{
+  "pulso": 44,
+  "estres": 22
+}
+{
+  "pulso": 57,
+  "estres": 28
+}
+{
+  "pulso": 61,
+  "estres": 30
+}
+{
+  "pulso": 77,
+  "estres": 38
+}
+{
+  "pulso": 89,
+  "estres": 44
+}
+{
+  "pulso": 97,
+  "estres": 48
+}
+{
+  "pulso": 115,
+  "estres": 57
+}
+{
+  "pulso": 130,
+  "estres": 65
+}
+{
+  "pulso": 130,
+  "estres": 65
+}
+{
+  "pulso": 142,
+  "estres": 71
+}
+{
+  "pulso": 160,
+  "estres": 80
+}
+{
+  "pulso": 174,
+  "estres": 87
+}
+{
+  "pulso": 182,
+  "estres": 91
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 166,
+  "estres": 83
+}
+{
+  "pulso": 159,
+  "estres": 79
+}
+{
+  "pulso": 149,
+  "estres": 74
+}
+{
+  "pulso": 144,
+  "estres": 72
+}
+{
+  "pulso": 128,
+  "estres": 64
+}
+{
+  "pulso": 118,
+  "estres": 59
+}
+{
+  "pulso": 117,
+  "estres": 58
+}
+{
+  "pulso": 137,
+  "estres": 68
+}
+{
+  "pulso": 153,
+  "estres": 76
+}
+{
+  "pulso": 173,
+  "estres": 86
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 177,
+  "estres": 88
+}
+{
+  "pulso": 147,
+  "estres": 73
+}
+{
+  "pulso": 117,
+  "estres": 58
+}
+{
+  "pulso": 89,
+  "estres": 44
+}
+{
+  "pulso": 51,
+  "estres": 25
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 18,
+  "estres": 9
+}
+{
+  "pulso": 44,
+  "estres": 22
+}
+{
+  "pulso": 63,
+  "estres": 31
+}
+{
+  "pulso": 84,
+  "estres": 42
+}
+{
+  "pulso": 93,
+  "estres": 46
+}
+{
+  "pulso": 117,
+  "estres": 58
+}
+{
+  "pulso": 147,
+  "estres": 73
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
+{
+  "pulso": 185,
+  "estres": 92
+}
