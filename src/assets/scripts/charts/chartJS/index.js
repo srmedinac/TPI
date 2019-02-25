@@ -7,13 +7,17 @@ export default (function () {
   // ------------------------------------------------------
 
   const lineChartBox = document.getElementById('line-chart');
-  var port = new SerialPort('COM4', {
-    baudRate: 115200
-  });
-  var Readline = SerialPort.parsers.Readline
-  
+  //var port = new SerialPort('COM4', {
+  //  baudRate: 115200
+  //});
+  //var Readline = SerialPort.parsers.Readline
+
+  //Arreglos de datos stress & HR para charts
+  var readStress = [];
+  var readHR = [];
+
   //example json structure to receive from arduino
-  var jsonfile = {
+  /*var jsonfile = {
     "stress": [{
        "hour": "1:00 am",
        "value": 60
@@ -28,11 +32,12 @@ export default (function () {
        "hour": "2:00 am",
        "value": 100
     }]
- };
+ };*/
  var datajson = {"stress":30,"HR":40};
+ var datajson2 = {"stress":40,"HR":55};
  //datajson = JSON.parse(datajson);
 //how to receive data? maybe json from arduino?
-  
+/*
   var labelsStress = jsonfile.stress.map(function(e) {
       return e.hour;
    });
@@ -43,6 +48,7 @@ export default (function () {
    var dataHR = jsonfile.HeartRate.map(function(e) {
     return e.value;
  });;
+ */
 var result = [];                      // Results will go here
 var nowHour = new Date().getHours();  // Get current hour of the day
 
@@ -50,11 +56,13 @@ var nowHour = new Date().getHours();  // Get current hour of the day
 for(var i = 0; i < 24; i++){
   result.push(i + "00");  // Put loop counter into array with "00" next to it
 }
-  var readStress = datajson.stress;
+  readStress.push(datajson.stress);
+  readStress.push(datajson2.stress)
   console.log(readStress);
-  var readHR = datajson.HR;
+  readHR.push(datajson.HR);
+  readHR.push(datajson2.HR);
   console.log(readHR)
-  
+
   function addData(chart, label, data) {
     chart.data.labels.push(label);
     chart.data.datasets.forEach((dataset) => {
@@ -76,14 +84,14 @@ for(var i = 0; i < 24; i++){
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : datajson.stress,
+          data                 : readStress,
         }, {
           label                : 'Heart Rate',
           backgroundColor      : 'rgba(232, 245, 233, 0.5)',
           borderColor          : COLORS['blue-500'],
           pointBackgroundColor : COLORS['blue-700'],
           borderWidth          : 2,
-          data                 : datajson.HR,
+          data                 : readHR,
         }],
       },
 
@@ -94,7 +102,7 @@ for(var i = 0; i < 24; i++){
       },
 
     });
-    addData(chart, '3:00 am' , 30) //adding a point in chart
+    //addData(chart, '000' , 30) //adding a point in chart
   }
 
   const lineChartBox2 = document.getElementById('line-chart2');
@@ -132,7 +140,7 @@ for(var i = 0; i < 24; i++){
 
     });
     //addData(chart2, '2018' , 0) //adding a point in chart
-  }  
+  }
 /*
   // ------------------------------------------------------
   // @Bar Charts
@@ -200,7 +208,7 @@ for(var i = 0; i < 24; i++){
       addData(areaChart, 'test', 60 );
       addData(areaChart, 'test', 20 );
       //if dataset.data # > x, destroy and remake?
-    
+
   }
 /*
   // ------------------------------------------------------
