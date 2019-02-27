@@ -58,18 +58,29 @@ for(var i = 0; i < 24; i++){
 }
   readStress.push(datajson.stress);
   readStress.push(datajson2.stress)
-  console.log(readStress);
   readHR.push(datajson.HR);
   readHR.push(datajson2.HR);
-  console.log(readHR)
+
 
   function addData(chart, label, data) {
-    chart.data.labels.push(label);
-    chart.data.datasets.forEach((dataset) => {
-        dataset.data.push(data);
-    });
-    chart.update();
-}
+    if (chart.data.labels.length > 15) {
+      chart.data.labels.shift();
+      chart.data.labels.push(label);
+      chart.data.datasets.forEach((dataset) => {
+          dataset.data.shift();
+          dataset.data.push(data);
+      });
+      chart.update();
+    }
+    else{
+      chart.data.labels.push(label);
+      chart.data.datasets.forEach((dataset) => {
+          dataset.data.push(data);
+      });
+      chart.update();
+    }
+  }
+
   if (lineChartBox) {
     const lineCtx = lineChartBox.getContext('2d');
     lineChartBox.height = 80;
@@ -114,21 +125,14 @@ for(var i = 0; i < 24; i++){
     var chart2 = new Chart(line2Ctx, {
       type: 'line',
       data: {
-        labels: ['12:00 am', '1:00 am', '2:00 am'],
+        labels: ['12:00 am', '1:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am'],
         datasets: [{
           label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : [60, 80, 110],
-        }, {
-          label                : 'Heart Rate',
-          backgroundColor      : 'rgba(232, 245, 233, 0.5)',
-          borderColor          : COLORS['blue-500'],
-          pointBackgroundColor : COLORS['blue-700'],
-          borderWidth          : 2,
-          data                 : [70, 75, 85],
+          data                 : [60, 80, 110,50,60,40,35,70,65,90,100,50,85],
         }],
       },
 
@@ -139,6 +143,11 @@ for(var i = 0; i < 24; i++){
       },
 
     });
+    addData(chart2,'3:00 am',40);
+    addData(chart2,'6:00 pm',10);
+    addData(chart2,'7:00 pm',150);
+
+
     //addData(chart2, '2018' , 0) //adding a point in chart
   }
 /*
