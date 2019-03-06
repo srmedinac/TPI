@@ -81,6 +81,10 @@ for(var i = 0; i < 24; i++){
     }
   }
 
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dic'];
+readHR.push(37,58,50,44,60,40,39,52,34,55);
+readStress.push(29,45,37,33,39,34,37,45,27,40);
+
   if (lineChartBox) {
     const lineCtx = lineChartBox.getContext('2d');
     lineChartBox.height = 80;
@@ -88,7 +92,7 @@ for(var i = 0; i < 24; i++){
     var chart = new Chart(lineCtx, {
       type: 'line',
       data: {
-        labels: result,
+        labels: months,
         datasets: [{
           label                : 'Stress',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
@@ -125,14 +129,14 @@ for(var i = 0; i < 24; i++){
     var chart2 = new Chart(line2Ctx, {
       type: 'line',
       data: {
-        labels: ['12:00 am', '1:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am', '2:00 am'],
+        labels: ['12:00 am', '1:00 am', '2:00 am', '3:00 am', '4:00 am', '5:00 am', '6:00 am','7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', '12:00 am', '1:00 pm'],
         datasets: [{
-          label                : 'Stress',
+          label                : 'Hear Rate',
           backgroundColor      : 'rgba(237, 231, 246, 0.5)',
           borderColor          : COLORS['deep-purple-500'],
           pointBackgroundColor : COLORS['deep-purple-700'],
           borderWidth          : 2,
-          data                 : [60, 80, 110,50,60,40,35,70,65,90,100,50,85],
+          data                 : [60, 80, 85,50,60,40,35,70,65,90,100,50,85,60],
         }],
       },
 
@@ -143,9 +147,9 @@ for(var i = 0; i < 24; i++){
       },
 
     });
-    addData(chart2,'3:00 am',40);
-    addData(chart2,'6:00 pm',10);
-    addData(chart2,'7:00 pm',150);
+    //addData(chart2,'2:00 pm',40);
+    //addData(chart2,'3:00 pm',10);
+    //addData(chart2,'4:00 pm',150);
 
 
     //addData(chart2, '2018' , 0) //adding a point in chart
@@ -211,11 +215,11 @@ for(var i = 0; i < 24; i++){
       },
     });
     //for(i = 0; i < 20; i++){
-      addData(areaChart, 'test', 10 );
-      addData(areaChart, 'test', 30 );
-      addData(areaChart, 'test', 50 );
-      addData(areaChart, 'test', 60 );
-      addData(areaChart, 'test', 20 );
+      addData(areaChart, '9:00 am', 10 );
+      addData(areaChart, '10:00 am', 30 );
+      addData(areaChart, '11:00 am', 50 );
+      addData(areaChart, '12:00 am', 60 );
+      addData(areaChart, '1:00 pm', 20 );
       //if dataset.data # > x, destroy and remake?
 
   }
