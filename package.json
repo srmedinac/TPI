@@ -11,7 +11,8 @@
     "preview": "cross-env NODE_ENV=\"production\" webpack-dev-server",
     "lint:js": "eslint ./src ./webpack ./*.js -f table --ext .js --ext .jsx",
     "lint:scss": "stylelint ./src/**/*.scss --syntax scss",
-    "lint": "npm run lint:js && npm run lint:scss"
+    "lint": "npm run lint:js && npm run lint:scss",
+    "heroku-prebuild": "npm install --dev"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
