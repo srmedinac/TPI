@@ -32,3 +32,7 @@ package-lock.json
 build/
 
 adminator/
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
