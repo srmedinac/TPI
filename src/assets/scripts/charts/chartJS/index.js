@@ -168,6 +168,8 @@ readStress.push(29,45,37,33,39,34,37,45,27,40);
     });
 
   }
+
+  //Cgeneration of random numbers for test
   denData();
   function denData(){
     var d = new Date();
@@ -177,7 +179,7 @@ readStress.push(29,45,37,33,39,34,37,45,27,40);
     var streRan = Math.floor(Math.random() * (10 + 10 + 1) ) - 10;
     //console.log(ran)
     addData(chart2, time, ran);
-    addData(areaChart, time, ran -50 + streRan );
+    addData(areaChart, time, ran - 50 + streRan );
     setTimeout(function(){denData()}, 30000);
   }
 
