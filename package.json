@@ -65,5 +65,8 @@
     "popper.js": "^1.12.6",
     "serialport": "^7.1.4",
     "skycons": "^1.0.0"
+  },
+  "engines": {
+    "node": "10.15.2"
   }
 }
