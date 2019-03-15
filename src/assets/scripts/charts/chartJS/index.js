@@ -180,7 +180,7 @@ readStress.push(29,45,37,33,39,34,37,45,27,40);
     //console.log(ran)
     addData(chart2, time, ran);
     addData(areaChart, time, ran - 50 + streRan );
-    setTimeout(function(){denData()}, 30000);
+    setTimeout(function(){denData()}, 15000);
   }
 
 }())
